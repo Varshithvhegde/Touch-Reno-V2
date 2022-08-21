@@ -3,6 +3,7 @@ package com.example.myapplication.activities;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -11,6 +12,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.bumptech.glide.Glide;
+import com.example.myapplication.ArActivity;
 import com.example.myapplication.R;
 import com.example.myapplication.models.AllAccModel;
 import com.example.myapplication.models.AllTopsModel;
@@ -25,11 +27,11 @@ import java.util.HashMap;
 public class AccessoriesDetailedActivity extends AppCompatActivity {
 
     TextView acc_name_dtl, acc_price_dtl, acc_dec_dtl, quantity;
-    Button addToCart;
+    Button addToCart,ArButton;
     ImageView additem, removeitem, acc_img_dtl;
     int totalQuantity=1;
     int totalPrice=0;
-
+    String arurl="";
     FirebaseFirestore firestore;
     FirebaseAuth auth;
 
@@ -51,7 +53,7 @@ public class AccessoriesDetailedActivity extends AppCompatActivity {
         additem=findViewById(R.id.additem);
         removeitem=findViewById(R.id.removeitem);
         quantity=findViewById(R.id.quantity);
-
+        ArButton=findViewById(R.id.ar);
         acc_img_dtl=findViewById(R.id.acc_img_dtl);
         acc_name_dtl=findViewById(R.id.acc_name_dtl);
         acc_price_dtl=findViewById(R.id.acc_price_dtl);
@@ -90,6 +92,16 @@ public class AccessoriesDetailedActivity extends AppCompatActivity {
                     quantity.setText(String.valueOf(totalQuantity));
                     totalPrice=allAccModel.getPrice()*totalQuantity;
                 }
+            }
+        });
+        ArButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                arurl=allAccModel.getName2();
+                Intent intent = new Intent(AccessoriesDetailedActivity.this, ArActivity.class);
+                intent.putExtra("message_key", arurl);
+              //  Toast.makeText(getApplicationContext(),arurl,Toast.LENGTH_SHORT).show();
+                startActivity(intent);
             }
         });
 

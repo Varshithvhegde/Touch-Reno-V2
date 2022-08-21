@@ -3,18 +3,20 @@ package com.example.myapplication.models;
 import java.io.Serializable;
 
 public class AllAccModel implements Serializable {
-    String name, img_url, type, description;
+    String name, img_url, type, description,ar,name2;
     int price;
 
     public AllAccModel() {
     }
 
-    public AllAccModel(String name, String img_url, String type, String description, int price) {
+    public AllAccModel(String name,String name2,String img_url, String type, String description, int price,String ar) {
         this.name = name;
+        this.name2=name2;
         this.img_url = img_url;
         this.type = type;
         this.description = description;
         this.price = price;
+        this.ar=ar;
     }
 
     public String getName() {
@@ -55,5 +57,15 @@ public class AllAccModel implements Serializable {
 
     public void setPrice(int price) {
         this.price = price;
+    }
+
+    public String getAr(){return ar;}
+    public void setAr(String ar) {
+        this.ar = ar;
+    }
+
+
+    public String getName2() {
+        return name2;
     }
 }
