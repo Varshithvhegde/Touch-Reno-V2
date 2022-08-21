@@ -41,7 +41,7 @@ public class AllAccAdapter extends RecyclerView.Adapter<AllAccAdapter.ViewHolder
     public void onBindViewHolder(@NonNull AllAccAdapter.ViewHolder holder, @SuppressLint("RecyclerView") int position) {
         Glide.with(context).load(list.get(position).getImg_url()).into(holder.imageView);
         holder.name.setText(list.get(position).getName());
-        holder.price.setText("₱"+list.get(position).getPrice());
+        holder.price.setText("₹"+list.get(position).getPrice());
 
         holder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override

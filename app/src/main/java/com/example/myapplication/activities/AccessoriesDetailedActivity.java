@@ -62,7 +62,7 @@ public class AccessoriesDetailedActivity extends AppCompatActivity {
         if (allAccModel!=null){
             Glide.with(getApplicationContext()).load(allAccModel.getImg_url()).into(acc_img_dtl);
             acc_name_dtl.setText(allAccModel.getName());
-            acc_price_dtl.setText("₱"+allAccModel.getPrice());
+            acc_price_dtl.setText("₹"+allAccModel.getPrice());
             acc_dec_dtl.setText(allAccModel.getDescription());
             totalPrice=allAccModel.getPrice()*totalQuantity;
         }
