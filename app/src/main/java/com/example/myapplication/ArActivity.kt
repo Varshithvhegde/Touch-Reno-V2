@@ -11,7 +11,7 @@ class ArActivity : AppCompatActivity() {
         setContentView(R.layout.activity_ar)
 
         var message: String? = intent.getStringExtra("message_key")
-        Toast.makeText(this, message, Toast.LENGTH_SHORT).show()
+
         (supportFragmentManager.findFragmentById(R.id.arFragment) as ArFragment)
             .setOnTapPlaneGlbModel(message)
     }
