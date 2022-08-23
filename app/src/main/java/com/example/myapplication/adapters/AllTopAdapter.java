@@ -39,7 +39,7 @@ public class AllTopAdapter extends RecyclerView.Adapter<AllTopAdapter.ViewHolder
     public void onBindViewHolder(@NonNull AllTopAdapter.ViewHolder holder, int position) {
         Glide.with(context).load(list.get(position).getImg_url()).into(holder.imageView);
         holder.name.setText(list.get(position).getName());
-        holder.price.setText("₱"+list.get(position).getPrice());
+        holder.price.setText("₹"+list.get(position).getPrice());
 
         holder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override

@@ -60,7 +60,7 @@ public class BottomsDetailedActivity extends AppCompatActivity {
         if (allBottomsModel!=null){
             Glide.with(getApplicationContext()).load(allBottomsModel.getImg_url()).into(bot_img_dtl);
             bot_name_dtl.setText(allBottomsModel.getName());
-            bot_price_dtl.setText("₱"+allBottomsModel.getPrice());
+            bot_price_dtl.setText("₹"+allBottomsModel.getPrice());
             bot_dec_dtl.setText(allBottomsModel.getDescription());
             totalPrice=allBottomsModel.getPrice()*totalQuantity;
         }

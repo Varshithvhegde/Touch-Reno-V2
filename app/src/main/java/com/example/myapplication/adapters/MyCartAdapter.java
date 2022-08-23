@@ -49,7 +49,7 @@ public class MyCartAdapter extends RecyclerView.Adapter<MyCartAdapter.ViewHolder
         holder.name.setText(myCartModelList.get(position).getName());
         holder.price.setText(myCartModelList.get(position).getPrice());
         holder.quantity.setText(myCartModelList.get(position).getQuantity());
-        holder.total.setText(String.valueOf("₱"+myCartModelList.get(position).getTotal()));
+        holder.total.setText(String.valueOf("₹"+myCartModelList.get(position).getTotal()));
 
         grandtotal+=myCartModelList.get(position).getTotal();
 

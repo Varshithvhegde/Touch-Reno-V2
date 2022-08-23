@@ -8,7 +8,7 @@
     android:background="@color/white"
     android:orientation="vertical"
     tools:context=".RegistrationActivity">
-    
+
     <RelativeLayout
         android:id="@+id/centerhorizontalline"
         android:layout_width="match_parent"

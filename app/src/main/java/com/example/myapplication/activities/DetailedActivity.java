@@ -61,7 +61,7 @@ public class DetailedActivity extends AppCompatActivity {
         if (allTopsModel!=null){
             Glide.with(getApplicationContext()).load(allTopsModel.getImg_url()).into(prodimg);
             prodname.setText(allTopsModel.getName());
-            prodprice.setText("₱"+allTopsModel.getPrice());
+            prodprice.setText("₹"+allTopsModel.getPrice());
             highlights.setText(allTopsModel.getDescription());
             totalPrice=allTopsModel.getPrice()*totalQuantity;
         }
