@@ -119,7 +119,7 @@ public class myCartFragment extends Fragment {
         @Override
         public void onReceive(Context context, Intent intent) {
             int totalBill=intent.getIntExtra("totalAmount",0);
-            overTotalAmount.setText("₱"+totalBill);
+            overTotalAmount.setText("₹"+totalBill);
         }
     };
 

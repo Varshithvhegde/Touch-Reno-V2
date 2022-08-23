@@ -9,7 +9,6 @@ public class AllTopsModel implements Serializable {
     public AllTopsModel() {
     }
 
-    
     public AllTopsModel(String name, String img_url, String type, String description, int price) {
         this.name = name;
         this.img_url = img_url;
