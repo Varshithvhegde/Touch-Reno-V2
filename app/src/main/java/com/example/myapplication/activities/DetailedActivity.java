@@ -3,6 +3,7 @@ package com.example.myapplication.activities;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -11,6 +12,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.bumptech.glide.Glide;
+import com.example.myapplication.ArActivity;
 import com.example.myapplication.R;
 import com.example.myapplication.models.AllAccModel;
 import com.example.myapplication.models.AllBottomsModel;
@@ -26,11 +28,11 @@ import java.util.HashMap;
 public class DetailedActivity extends AppCompatActivity {
 
     TextView prodname, prodprice, highlights, quantity;
-    Button addToCart;
+    Button addToCart,ArButton;
     ImageView additem, removeitem, prodimg;
     int totalQuantity=1;
     int totalPrice=0;
-
+    String arurl="";
     FirebaseFirestore firestore;
     FirebaseAuth auth;
 
@@ -57,6 +59,7 @@ public class DetailedActivity extends AppCompatActivity {
         prodname=findViewById(R.id.prodname);
         prodprice=findViewById(R.id.prodprice);
         highlights=findViewById(R.id.highlights);
+        ArButton=findViewById(R.id.ar);
 
         if (allTopsModel!=null){
             Glide.with(getApplicationContext()).load(allTopsModel.getImg_url()).into(prodimg);
@@ -91,6 +94,16 @@ public class DetailedActivity extends AppCompatActivity {
                     quantity.setText(String.valueOf(totalQuantity));
                     totalPrice=allTopsModel.getPrice()*totalQuantity;
                 }
+            }
+        });
+        ArButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                arurl=allTopsModel.getName2();
+                Intent intent = new Intent(DetailedActivity.this, ArActivity.class);
+                intent.putExtra("message_key", arurl);
+                //  Toast.makeText(getApplicationContext(),arurl,Toast.LENGTH_SHORT).show();
+                startActivity(intent);
             }
         });
 
