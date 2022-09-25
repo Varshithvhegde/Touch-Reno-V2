@@ -3,15 +3,16 @@ package com.example.myapplication.models;
 import java.io.Serializable;
 
 public class AllBottomsModel implements Serializable {
-    String name, img_url, type, description;
+    String name, img_url, type, description,name2;
     int price;
 
     public AllBottomsModel() {
     }
 
-    public AllBottomsModel(String name, String img_url, String type, String description, int price) {
+    public AllBottomsModel(String name,String name2, String img_url, String type, String description, int price) {
         this.name = name;
         this.img_url = img_url;
+        this.name2=name2;
         this.type = type;
         this.description = description;
         this.price = price;
@@ -55,5 +56,9 @@ public class AllBottomsModel implements Serializable {
 
     public void setPrice(int price) {
         this.price = price;
+    }
+
+    public String getName2() {
+        return name2;
     }
 }

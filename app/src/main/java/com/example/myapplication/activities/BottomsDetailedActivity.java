@@ -3,6 +3,7 @@ package com.example.myapplication.activities;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -11,6 +12,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.bumptech.glide.Glide;
+import com.example.myapplication.ArActivity;
 import com.example.myapplication.R;
 import com.example.myapplication.models.AllAccModel;
 import com.example.myapplication.models.AllBottomsModel;
@@ -26,11 +28,11 @@ import java.util.HashMap;
 public class BottomsDetailedActivity extends AppCompatActivity {
 
     TextView bot_name_dtl, bot_price_dtl, bot_dec_dtl, quantity;
-    Button addToCart;
+    Button addToCart,ArButton;
     ImageView additem, removeitem, bot_img_dtl;
     int totalQuantity=1;
     int totalPrice=0;
-
+    String arurl="";
     FirebaseFirestore firestore;
     FirebaseAuth auth;
 
@@ -51,7 +53,7 @@ public class BottomsDetailedActivity extends AppCompatActivity {
         additem=findViewById(R.id.additem);
         removeitem=findViewById(R.id.removeitem);
         quantity=findViewById(R.id.quantity);
-
+        ArButton=findViewById(R.id.ar);
         bot_img_dtl=findViewById(R.id.bot_img_dtl);
         bot_name_dtl=findViewById(R.id.bot_name_dtl);
         bot_price_dtl=findViewById(R.id.bot_price_dtl);
@@ -93,6 +95,16 @@ public class BottomsDetailedActivity extends AppCompatActivity {
                 }
             }
         });
+        ArButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                arurl=allBottomsModel.getName2();
+                Intent intent = new Intent(BottomsDetailedActivity.this, ArActivity.class);
+                intent.putExtra("message_key", arurl);
+                //  Toast.makeText(getApplicationContext(),arurl,Toast.LENGTH_SHORT).show();
+                startActivity(intent);
+            }
+        });
 
     }
     private void addedToCart() {
@@ -111,4 +123,5 @@ public class BottomsDetailedActivity extends AppCompatActivity {
             }
         });
     }
+
 }
