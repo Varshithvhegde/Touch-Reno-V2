@@ -68,9 +68,11 @@
         <entry key="..\:/Users/varsh.LAPTOP-IG9S62OJ/AndroidStudioProjects/Penshoppe-Men-App-with-Firebase-System-master/app/src/main/res/drawable/ic_baseline_remove_circle_outline_24.xml" value="0.1265" />
         <entry key="..\:/Users/varsh.LAPTOP-IG9S62OJ/AndroidStudioProjects/Penshoppe-Men-App-with-Firebase-System-master/app/src/main/res/drawable/ic_baseline_search_24.xml" value="0.1265" />
         <entry key="..\:/Users/varsh.LAPTOP-IG9S62OJ/AndroidStudioProjects/Penshoppe-Men-App-with-Firebase-System-master/app/src/main/res/drawable/ic_baseline_shopping_cart_24.xml" value="0.1265" />
+        <entry key="..\:/Users/varsh.LAPTOP-IG9S62OJ/AndroidStudioProjects/Penshoppe-Men-App-with-Firebase-System-master/app/src/main/res/drawable/ic_home_gray_24dp.xml" value="0.1575" />
         <entry key="..\:/Users/varsh.LAPTOP-IG9S62OJ/AndroidStudioProjects/Penshoppe-Men-App-with-Firebase-System-master/app/src/main/res/drawable/ic_menu_camera.xml" value="0.1265" />
         <entry key="..\:/Users/varsh.LAPTOP-IG9S62OJ/AndroidStudioProjects/Penshoppe-Men-App-with-Firebase-System-master/app/src/main/res/drawable/ic_menu_gallery.xml" value="0.1265" />
         <entry key="..\:/Users/varsh.LAPTOP-IG9S62OJ/AndroidStudioProjects/Penshoppe-Men-App-with-Firebase-System-master/app/src/main/res/drawable/ic_menu_slideshow.xml" value="0.1265" />
+        <entry key="..\:/Users/varsh.LAPTOP-IG9S62OJ/AndroidStudioProjects/Penshoppe-Men-App-with-Firebase-System-master/app/src/main/res/drawable/ic_shopping_cart_white_24dp.xml" value="0.1575" />
         <entry key="..\:/Users/varsh.LAPTOP-IG9S62OJ/AndroidStudioProjects/Penshoppe-Men-App-with-Firebase-System-master/app/src/main/res/drawable/searchbox.xml" value="0.1265" />
         <entry key="..\:/Users/varsh.LAPTOP-IG9S62OJ/AndroidStudioProjects/Penshoppe-Men-App-with-Firebase-System-master/app/src/main/res/drawable/side_nav_bar.xml" value="0.1265" />
         <entry key="..\:/Users/varsh.LAPTOP-IG9S62OJ/AndroidStudioProjects/Penshoppe-Men-App-with-Firebase-System-master/app/src/main/res/drawable/signupbtn.xml" value="0.1265" />
@@ -84,6 +86,7 @@
         <entry key="..\:/Users/varsh.LAPTOP-IG9S62OJ/AndroidStudioProjects/Penshoppe-Men-App-with-Firebase-System-master/app/src/main/res/layout/activity_detailed.xml" value="0.25833333333333336" />
         <entry key="..\:/Users/varsh.LAPTOP-IG9S62OJ/AndroidStudioProjects/Penshoppe-Men-App-with-Firebase-System-master/app/src/main/res/layout/activity_login.xml" value="0.24351851851851852" />
         <entry key="..\:/Users/varsh.LAPTOP-IG9S62OJ/AndroidStudioProjects/Penshoppe-Men-App-with-Firebase-System-master/app/src/main/res/layout/activity_main.xml" value="0.24351851851851852" />
+        <entry key="..\:/Users/varsh.LAPTOP-IG9S62OJ/AndroidStudioProjects/Penshoppe-Men-App-with-Firebase-System-master/app/src/main/res/layout/activity_my_cart_sys.xml" value="0.24427083333333333" />
         <entry key="..\:/Users/varsh.LAPTOP-IG9S62OJ/AndroidStudioProjects/Penshoppe-Men-App-with-Firebase-System-master/app/src/main/res/layout/activity_place_order.xml" value="0.25833333333333336" />
         <entry key="..\:/Users/varsh.LAPTOP-IG9S62OJ/AndroidStudioProjects/Penshoppe-Men-App-with-Firebase-System-master/app/src/main/res/layout/activity_registration.xml" value="0.24351851851851852" />
         <entry key="..\:/Users/varsh.LAPTOP-IG9S62OJ/AndroidStudioProjects/Penshoppe-Men-App-with-Firebase-System-master/app/src/main/res/layout/activity_splashscreen.xml" value="0.25833333333333336" />

@@ -1,9 +1,13 @@
 package com.example.myapplication.ui.home;
 
+import android.app.Activity;
+import android.app.FragmentManager;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.LinearLayout;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
@@ -18,6 +22,8 @@ import com.example.myapplication.adapters.NavTopsAdapter;
 import com.example.myapplication.models.NavAccessoriesModel;
 import com.example.myapplication.models.NavBottomsModel;
 import com.example.myapplication.models.NavTopsModel;
+import com.example.myapplication.myCartSys;
+import com.example.myapplication.ui.cart.myCartFragment;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.firestore.FirebaseFirestore;
@@ -28,7 +34,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class HomeFragment extends Fragment {
-
+    LinearLayout home,cart;
     RecyclerView topRec, botRec, accRec;
     FirebaseFirestore db;
     //Tops Items
@@ -45,7 +51,18 @@ public class HomeFragment extends Fragment {
                              ViewGroup container, Bundle savedInstanceState) {
         View root = inflater.inflate(R.layout.fragment_home, container, false);
         db=FirebaseFirestore.getInstance();
+        home=root.findViewById(R.id.homenav);
+        cart=root.findViewById(R.id.cartnav);
+        cart.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i = new Intent(getContext(), myCartSys.class);
+                startActivity(i);
+//                ((Activity) getActivity()).overridePendingTransition(0, 0);
 
+
+            }
+        });
         //Tops Items
         topRec=root.findViewById(R.id.recyclertop);
         topRec.setLayoutManager(new LinearLayoutManager(getActivity(),RecyclerView.HORIZONTAL, false));

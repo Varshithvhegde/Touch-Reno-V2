@@ -23,11 +23,12 @@ import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.storage.FirebaseStorage;
 
 public class ExitFragment extends Fragment {
-
+    FirebaseAuth firebaseAuth;
 
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
+        firebaseAuth = FirebaseAuth.getInstance();
         View root = inflater.inflate(R.layout.activity_main, container, false);
         AlertDialog.Builder builder=new AlertDialog.Builder(getActivity());
         builder.setTitle("Logout");
@@ -35,8 +36,12 @@ public class ExitFragment extends Fragment {
         builder.setPositiveButton("YES", new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialog, int which) {
-                getActivity().finishAffinity();
-                System.exit(0);
+                firebaseAuth.signOut();
+//                getActivity().finishAffinity();
+                getActivity().finish();
+//                System.exit(0);
+
+
             }
         });
         builder.setNegativeButton("NO", new DialogInterface.OnClickListener() {

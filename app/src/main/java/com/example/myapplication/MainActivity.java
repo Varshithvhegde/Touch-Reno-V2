@@ -3,6 +3,7 @@ package com.example.myapplication;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.example.myapplication.adapters.ImageSliderAdapter;
@@ -25,7 +26,7 @@ public class MainActivity extends AppCompatActivity {
 
     private AppBarConfiguration mAppBarConfiguration;
     private ActivityMainBinding binding;
-
+    public LinearLayout navcart;
     SliderView sliderView;
     int[] images={R.drawable.slide1,R.drawable.slide2,R.drawable.slide3,R.drawable.slide4};
 
@@ -35,7 +36,7 @@ public class MainActivity extends AppCompatActivity {
 
         binding = ActivityMainBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
-
+        navcart=(LinearLayout) findViewById(R.id.cartnav);
         DrawerLayout drawer = binding.drawerLayout;
         NavigationView navigationView = binding.navView;
         // Passing each menu ID as a set of Ids because each
