@@ -11,11 +11,15 @@ import android.widget.LinearLayout;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
+import androidx.cardview.widget.CardView;
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.myapplication.R;
+import com.example.myapplication.activities.AccessoriesActivity;
+import com.example.myapplication.activities.BottomsActivity;
+import com.example.myapplication.activities.TopsActivity;
 import com.example.myapplication.adapters.NavAccessoriesAdapter;
 import com.example.myapplication.adapters.NavBottomsAdapter;
 import com.example.myapplication.adapters.NavTopsAdapter;
@@ -35,6 +39,7 @@ import java.util.List;
 
 public class HomeFragment extends Fragment {
     LinearLayout home,cart;
+    CardView chairs,beds,access;
     RecyclerView topRec, botRec, accRec;
     FirebaseFirestore db;
     //Tops Items
@@ -51,6 +56,32 @@ public class HomeFragment extends Fragment {
                              ViewGroup container, Bundle savedInstanceState) {
         View root = inflater.inflate(R.layout.fragment_home, container, false);
         db=FirebaseFirestore.getInstance();
+        chairs= root.findViewById(R.id.catchair);
+        beds=root.findViewById(R.id.catbeds);
+        access=root.findViewById(R.id.catacc);
+        chairs.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+               Intent intent = new Intent(getContext(), BottomsActivity.class);
+               startActivity(intent);
+            }
+        });
+        beds.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getContext(), TopsActivity.class);
+                startActivity(intent);
+
+            }
+        });
+        access.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getContext(), AccessoriesActivity.class);
+                startActivity(intent);
+
+            }
+        });
         home=root.findViewById(R.id.homenav);
         cart=root.findViewById(R.id.cartnav);
         cart.setOnClickListener(new View.OnClickListener() {
