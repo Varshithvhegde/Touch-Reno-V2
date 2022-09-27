@@ -154,7 +154,7 @@
                     <!--                        </androidx.cardview.widget.CardView>-->
 
                     <androidx.cardview.widget.CardView
-                        android:id="@+id/catlamp"
+                        android:id="@+id/catbeds"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="4dp"
@@ -171,7 +171,7 @@
                             <ImageView
                                 android:layout_width="36dp"
                                 android:layout_height="36dp"
-                                android:src="@drawable/cap1_1" />
+                                android:src="@drawable/ic_baseline_single_bed_24" />
 
                             <RelativeLayout
                                 android:layout_width="match_parent"
@@ -182,7 +182,7 @@
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:fontFamily="@font/calibri"
-                                    android:text="Lamp"
+                                    android:text="Beds"
                                     android:textColor="#3C3C3C"
                                     android:textSize="16sp" />
 
