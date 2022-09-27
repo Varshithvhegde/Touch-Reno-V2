@@ -16,7 +16,6 @@ import com.bumptech.glide.Glide;
 import com.example.myapplication.ArActivity;
 import com.example.myapplication.R;
 import com.example.myapplication.models.AllAccModel;
-import com.example.myapplication.models.AllTopsModel;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.FirebaseAuth;

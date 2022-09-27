@@ -13,11 +13,8 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
 import com.example.myapplication.R;
-import com.example.myapplication.activities.BottomsActivity;
 import com.example.myapplication.activities.BottomsDetailedActivity;
-import com.example.myapplication.activities.DetailedActivity;
 import com.example.myapplication.models.AllBottomsModel;
-import com.example.myapplication.models.AllTopsModel;
 
 import java.util.List;
 

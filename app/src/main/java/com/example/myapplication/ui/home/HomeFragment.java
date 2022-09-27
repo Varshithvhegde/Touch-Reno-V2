@@ -1,7 +1,5 @@
 package com.example.myapplication.ui.home;
 
-import android.app.Activity;
-import android.app.FragmentManager;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -27,7 +25,6 @@ import com.example.myapplication.models.NavAccessoriesModel;
 import com.example.myapplication.models.NavBottomsModel;
 import com.example.myapplication.models.NavTopsModel;
 import com.example.myapplication.myCartSys;
-import com.example.myapplication.ui.cart.myCartFragment;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.firestore.FirebaseFirestore;

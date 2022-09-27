@@ -4,38 +4,24 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.localbroadcastmanager.content.LocalBroadcastManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import android.app.Activity;
-import android.app.FragmentManager;
 import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
 import android.content.IntentFilter;
 import android.os.Bundle;
-import android.view.LayoutInflater;
 import android.view.View;
-import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import androidx.annotation.NonNull;
-import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
-import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.myapplication.R;
 import com.example.myapplication.activities.PlaceOrderActivity;
 import com.example.myapplication.adapters.MyCartAdapter;
-import com.example.myapplication.adapters.NavAccessoriesAdapter;
-import com.example.myapplication.adapters.NavBottomsAdapter;
-import com.example.myapplication.adapters.NavTopsAdapter;
 import com.example.myapplication.models.MyCartModel;
-import com.example.myapplication.models.NavAccessoriesModel;
-import com.example.myapplication.models.NavBottomsModel;
-import com.example.myapplication.models.NavTopsModel;
-import com.example.myapplication.ui.cart.myCartFragment;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.FirebaseAuth;

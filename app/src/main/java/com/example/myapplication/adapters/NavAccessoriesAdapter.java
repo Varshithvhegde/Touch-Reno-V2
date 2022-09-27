@@ -14,7 +14,6 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.bumptech.glide.Glide;
 import com.example.myapplication.R;
 import com.example.myapplication.activities.AccessoriesActivity;
-import com.example.myapplication.activities.BottomsActivity;
 import com.example.myapplication.models.NavAccessoriesModel;
 
 import java.util.List;

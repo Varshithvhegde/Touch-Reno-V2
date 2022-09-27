@@ -9,9 +9,7 @@ import android.os.Bundle;
 
 import com.example.myapplication.R;
 import com.example.myapplication.adapters.AllAccAdapter;
-import com.example.myapplication.adapters.AllBottomsAdapter;
 import com.example.myapplication.models.AllAccModel;
-import com.example.myapplication.models.AllBottomsModel;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.firestore.DocumentSnapshot;
