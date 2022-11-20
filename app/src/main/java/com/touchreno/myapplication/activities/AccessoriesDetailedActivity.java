@@ -1,4 +1,4 @@
-package com.example.myapplication.activities;
+package com.touchreno.myapplication.activities;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -64,7 +64,7 @@ public class AccessoriesDetailedActivity extends AppCompatActivity {
             acc_name_dtl.setText(allAccModel.getName());
             acc_price_dtl.setText("₹"+allAccModel.getPrice());
             acc_dec_dtl.setText(allAccModel.getDescription());
-            totalPrice=allAccModel.getPrice()*totalQuantity;
+            totalPrice=Integer.parseInt( allAccModel.getPrice())*totalQuantity;
         }
 
         addToCart=findViewById(R.id.addtocart);
@@ -80,7 +80,7 @@ public class AccessoriesDetailedActivity extends AppCompatActivity {
                 if (totalQuantity<10){
                     totalQuantity++;
                     quantity.setText(String.valueOf(totalQuantity));
-                    totalPrice=allAccModel.getPrice()*totalQuantity;
+                    totalPrice=Integer.parseInt( allAccModel.getPrice())*totalQuantity;
                 }
             }
         });
@@ -90,7 +90,7 @@ public class AccessoriesDetailedActivity extends AppCompatActivity {
                 if (totalQuantity>1){
                     totalQuantity--;
                     quantity.setText(String.valueOf(totalQuantity));
-                    totalPrice=allAccModel.getPrice()*totalQuantity;
+                    totalPrice=Integer.parseInt( allAccModel.getPrice())*totalQuantity;
                 }
             }
         });
@@ -100,7 +100,7 @@ public class AccessoriesDetailedActivity extends AppCompatActivity {
                 arurl=allAccModel.getName2();
                 Intent intent = new Intent(AccessoriesDetailedActivity.this, ArActivity.class);
                 intent.putExtra("message_key", arurl);
-              //  Toast.makeText(getApplicationContext(),arurl,Toast.LENGTH_SHORT).show();
+                //  Toast.makeText(getApplicationContext(),arurl,Toast.LENGTH_SHORT).show();
                 startActivity(intent);
             }
         });
@@ -116,11 +116,11 @@ public class AccessoriesDetailedActivity extends AppCompatActivity {
 
         firestore.collection("CurrentUser").document(auth.getCurrentUser().getUid())
                 .collection("MyOrder").add(acccartMap).addOnCompleteListener(new OnCompleteListener<DocumentReference>() {
-            @Override
-            public void onComplete(@NonNull Task<DocumentReference> task) {
-                Toast.makeText(AccessoriesDetailedActivity.this, "Added to Cart", Toast.LENGTH_SHORT).show();
-                finish();
-            }
-        });
+                    @Override
+                    public void onComplete(@NonNull Task<DocumentReference> task) {
+                        Toast.makeText(AccessoriesDetailedActivity.this, "Added to Cart", Toast.LENGTH_SHORT).show();
+                        finish();
+                    }
+                });
     }
 }
