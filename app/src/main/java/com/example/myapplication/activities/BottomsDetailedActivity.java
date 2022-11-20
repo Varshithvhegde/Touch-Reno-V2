@@ -62,7 +62,7 @@ public class BottomsDetailedActivity extends AppCompatActivity {
             bot_name_dtl.setText(allBottomsModel.getName());
             bot_price_dtl.setText("₹"+allBottomsModel.getPrice());
             bot_dec_dtl.setText(allBottomsModel.getDescription());
-            totalPrice=allBottomsModel.getPrice()*totalQuantity;
+            totalPrice=Integer.parseInt( allBottomsModel.getPrice())*totalQuantity;
         }
         addToCart=findViewById(R.id.addtocart);
         addToCart.setOnClickListener(new View.OnClickListener() {
@@ -77,7 +77,7 @@ public class BottomsDetailedActivity extends AppCompatActivity {
                 if (totalQuantity<10){
                     totalQuantity++;
                     quantity.setText(String.valueOf(totalQuantity));
-                    totalPrice=allBottomsModel.getPrice()*totalQuantity;
+                    totalPrice=Integer.parseInt( allBottomsModel.getPrice())*totalQuantity;
 
                 }
             }
@@ -88,7 +88,7 @@ public class BottomsDetailedActivity extends AppCompatActivity {
                 if (totalQuantity>1){
                     totalQuantity--;
                     quantity.setText(String.valueOf(totalQuantity));
-                    totalPrice=allBottomsModel.getPrice()*totalQuantity;
+                    totalPrice=Integer.parseInt( allBottomsModel.getPrice())*totalQuantity;
 
                 }
             }

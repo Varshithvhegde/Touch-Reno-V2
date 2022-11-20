@@ -13,6 +13,7 @@ import android.widget.Toast;
 
 import com.bumptech.glide.Glide;
 
+
 import com.example.myapplication.ArActivity;
 import com.example.myapplication.R;
 import com.example.myapplication.models.AllAccModel;
@@ -64,7 +65,7 @@ public class AccessoriesDetailedActivity extends AppCompatActivity {
             acc_name_dtl.setText(allAccModel.getName());
             acc_price_dtl.setText("₹"+allAccModel.getPrice());
             acc_dec_dtl.setText(allAccModel.getDescription());
-            totalPrice=allAccModel.getPrice()*totalQuantity;
+            totalPrice=Integer.parseInt( allAccModel.getPrice())*totalQuantity;
         }
 
         addToCart=findViewById(R.id.addtocart);
@@ -80,7 +81,7 @@ public class AccessoriesDetailedActivity extends AppCompatActivity {
                 if (totalQuantity<10){
                     totalQuantity++;
                     quantity.setText(String.valueOf(totalQuantity));
-                    totalPrice=allAccModel.getPrice()*totalQuantity;
+                    totalPrice=Integer.parseInt( allAccModel.getPrice())*totalQuantity;
                 }
             }
         });
@@ -90,7 +91,7 @@ public class AccessoriesDetailedActivity extends AppCompatActivity {
                 if (totalQuantity>1){
                     totalQuantity--;
                     quantity.setText(String.valueOf(totalQuantity));
-                    totalPrice=allAccModel.getPrice()*totalQuantity;
+                    totalPrice=Integer.parseInt( allAccModel.getPrice())*totalQuantity;
                 }
             }
         });

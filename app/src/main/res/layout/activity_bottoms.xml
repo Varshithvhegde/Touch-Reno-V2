@@ -10,7 +10,7 @@
         android:id="@+id/toolbar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:title="Bottoms"
+        app:title="Chairs"
         app:titleTextColor="@color/white"
         android:background="#8793ec"/>
 

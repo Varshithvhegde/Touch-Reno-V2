@@ -4,12 +4,12 @@ import java.io.Serializable;
 
 public class AllAccModel implements Serializable {
     String name, img_url, type, description,ar,name2;
-    int price;
+    String price;
 
     public AllAccModel() {
     }
 
-    public AllAccModel(String name,String name2,String img_url, String type, String description, int price,String ar) {
+    public AllAccModel(String name,String name2,String img_url, String type, String description, String price,String ar) {
         this.name = name;
         this.name2=name2;
         this.img_url = img_url;
@@ -51,11 +51,11 @@ public class AllAccModel implements Serializable {
         this.description = description;
     }
 
-    public int getPrice() {
+    public String getPrice() {
         return price;
     }
 
-    public void setPrice(int price) {
+    public void setPrice(String price) {
         this.price = price;
     }
 

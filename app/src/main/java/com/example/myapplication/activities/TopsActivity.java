@@ -40,8 +40,8 @@ public class TopsActivity extends AppCompatActivity {
         allTopsModelList=new ArrayList<>();
         allTopAdapter=new AllTopAdapter(this, allTopsModelList);
         recyclerView.setAdapter(allTopAdapter);
-        if (type!=null && type.equalsIgnoreCase("Tops"));
-        firestore.collection("Tops").whereEqualTo("type", "Tops").get().addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
+        if (type!=null && type.equalsIgnoreCase("Beds"));
+        firestore.collection("Beds").whereEqualTo("type", "Beds").get().addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
             @Override
             public void onComplete(@NonNull Task<QuerySnapshot> task) {
                for (DocumentSnapshot documentSnapshot: task.getResult().getDocuments()){

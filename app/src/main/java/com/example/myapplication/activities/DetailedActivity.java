@@ -64,7 +64,7 @@ public class DetailedActivity extends AppCompatActivity {
             prodname.setText(allTopsModel.getName());
             prodprice.setText("₹"+allTopsModel.getPrice());
             highlights.setText(allTopsModel.getDescription());
-            totalPrice=allTopsModel.getPrice()*totalQuantity;
+            totalPrice=Integer.parseInt( allTopsModel.getPrice())*totalQuantity;
         }
 
         addToCart=findViewById(R.id.addtocart);
@@ -80,7 +80,7 @@ public class DetailedActivity extends AppCompatActivity {
                 if (totalQuantity<10){
                     totalQuantity++;
                     quantity.setText(String.valueOf(totalQuantity));
-                    totalPrice=allTopsModel.getPrice()*totalQuantity;
+                    totalPrice=Integer.parseInt( allTopsModel.getPrice())*totalQuantity;
                 }
             }
         });
@@ -90,7 +90,7 @@ public class DetailedActivity extends AppCompatActivity {
                 if (totalQuantity>1){
                     totalQuantity--;
                     quantity.setText(String.valueOf(totalQuantity));
-                    totalPrice=allTopsModel.getPrice()*totalQuantity;
+                    totalPrice=Integer.parseInt( allTopsModel.getPrice())*totalQuantity;
                 }
             }
         });
