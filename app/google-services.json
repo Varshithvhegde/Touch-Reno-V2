@@ -1,6 +1,7 @@
 {
   "project_info": {
     "project_number": "965446133306",
+    "firebase_url": "https://new-touch-reno-default-rtdb.firebaseio.com",
     "project_id": "new-touch-reno",
     "storage_bucket": "new-touch-reno.appspot.com"
   },
@@ -18,6 +19,43 @@
           "client_type": 1,
           "android_info": {
             "package_name": "com.example.myapplication",
+            "certificate_hash": "e3a8e7e48550fd1b870b26942ba1b5a6a7031d05"
+          }
+        },
+        {
+          "client_id": "965446133306-b5b1rdt8l6f98v78r07d6q2ial75e312.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCPowMHzizkih0j0BK-fW8Qe2CF0GSezRI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "965446133306-b5b1rdt8l6f98v78r07d6q2ial75e312.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:965446133306:android:9490895206ad1199a97703",
+        "android_client_info": {
+          "package_name": "com.touchreno.myapplication"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "965446133306-3unej17qpglvn2gfsak0dsvnhp5galml.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.touchreno.myapplication",
             "certificate_hash": "e3a8e7e48550fd1b870b26942ba1b5a6a7031d05"
           }
         },

@@ -7,19 +7,19 @@
 
     <fragment
         android:id="@+id/nav_home"
-        android:name="com.example.myapplication.ui.home.HomeFragment"
+        android:name="com.touchreno.myapplication.ui.home.HomeFragment"
         android:label="Touch Reno"
         tools:layout="@layout/fragment_home" />
 
     <fragment
         android:id="@+id/nav_myCart"
-        android:name="com.example.myapplication.ui.cart.myCartFragment"
+        android:name="com.touchreno.myapplication.ui.cart.myCartFragment"
         android:label="@string/menu_cart"
         tools:layout="@layout/fragment_my_cart" />
 
     <fragment
         android:id="@+id/nav_exit"
-        android:name="com.example.myapplication.ui.exit.ExitFragment"
+        android:name="com.touchreno.myapplication.ui.exit.ExitFragment"
         tools:layout="@layout/fragment_profile" />
 
 
