@@ -40,8 +40,8 @@ public class BottomsActivity extends AppCompatActivity {
         allBottomsModelList=new ArrayList<>();
         allBottomsAdapter=new AllBottomsAdapter(this, allBottomsModelList);
         recyclerView.setAdapter(allBottomsAdapter);
-        if (type!=null && type.equalsIgnoreCase("Bottoms"));
-        firestore.collection("Bottoms").whereEqualTo("type", "Bottoms").get().addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
+        if (type!=null && type.equalsIgnoreCase("Chairs"));
+        firestore.collection("Chairs").whereEqualTo("type", "Chairs").get().addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
             @Override
             public void onComplete(@NonNull Task<QuerySnapshot> task) {
                 for (DocumentSnapshot documentSnapshot: task.getResult().getDocuments()){

@@ -97,7 +97,7 @@ public class HomeFragment extends Fragment {
         navTopsModelList=new ArrayList<>();
         navTopsAdapter=new NavTopsAdapter(getActivity(),navTopsModelList);
         topRec.setAdapter(navTopsAdapter);
-        db.collection("Tops")
+        db.collection("Beds")
                 .get()
                 .addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
                     @Override
@@ -120,7 +120,7 @@ public class HomeFragment extends Fragment {
         navBottomsModelList=new ArrayList<>();
         navBottomsAdapter=new NavBottomsAdapter(getActivity(),navBottomsModelList);
         botRec.setAdapter(navBottomsAdapter);
-        db.collection("Bottoms")
+        db.collection("Chairs")
                 .get()
                 .addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
                     @Override

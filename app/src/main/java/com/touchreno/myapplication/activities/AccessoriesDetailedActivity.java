@@ -1,4 +1,4 @@
-package com.touchreno.myapplication.activities;
+package com.example.myapplication.activities;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
