@@ -14,7 +14,7 @@ import android.widget.Toast;
 import com.bumptech.glide.Glide;
 
 
-import com.touchreno.myapplication.ArActivity;
+
 import com.touchreno.myapplication.R;
 import com.touchreno.myapplication.models.AllAccModel;
 import com.google.android.gms.tasks.OnCompleteListener;
@@ -24,7 +24,7 @@ import com.google.firebase.firestore.DocumentReference;
 import com.google.firebase.firestore.FirebaseFirestore;
 
 import java.util.HashMap;
-
+import com.touchreno.myapplication.ArActivity;
 public class AccessoriesDetailedActivity extends AppCompatActivity {
 
     TextView acc_name_dtl, acc_price_dtl, acc_dec_dtl, quantity;

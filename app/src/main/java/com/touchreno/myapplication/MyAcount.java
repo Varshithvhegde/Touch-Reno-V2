@@ -1,9 +1,13 @@
 package com.touchreno.myapplication;
 
+import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 import android.widget.LinearLayout;
+import android.widget.ProgressBar;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -18,6 +22,7 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
 public class MyAcount extends AppCompatActivity {
+    FirebaseAuth firebaseAuth;
     TextView name,mobile,email,address,country,state;
     FirebaseDatabase database;
     LinearLayout home,cart,order,profile;
@@ -25,7 +30,8 @@ public class MyAcount extends AppCompatActivity {
     // Database Reference for Firebase.
     DatabaseReference databaseReference;
     FirebaseAuth auth;
-
+    Button logout;
+    ProgressBar progressBar;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -36,11 +42,15 @@ public class MyAcount extends AppCompatActivity {
         address =(TextView) findViewById(R.id.address);
         country=(TextView) findViewById(R.id.country);
         state = (TextView) findViewById(R.id.state);
-
+        logout=(Button) findViewById(R.id.logout);
+//        progressBar=(ProgressBar) findViewById(R.id.progressbar);
+//        progressBar.setVisibility(View.VISIBLE);
         home=findViewById(R.id.homenav);
         cart=findViewById(R.id.cartnav);
         order=findViewById(R.id.ordernav);
         profile=findViewById(R.id.profile1);
+
+        AlertDialog.Builder builder=new AlertDialog.Builder(this);
 
         auth=FirebaseAuth.getInstance();
         FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
@@ -61,7 +71,7 @@ public class MyAcount extends AppCompatActivity {
                 address.setText(a);
                 country.setText(c);
                 state.setText(s);
-
+//                progressBar.setVisibility(View.GONE);
 
             }
 
@@ -101,6 +111,34 @@ public class MyAcount extends AppCompatActivity {
 //               TO-DO
             }
         });
+
+//        logout.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                firebaseAuth = FirebaseAuth.getInstance();
+//                builder.setTitle("Logout");
+//                builder.setMessage("Are you sure you want to logout?");
+//                builder.setPositiveButton("YES", new DialogInterface.OnClickListener() {
+//                    @Override
+//                    public void onClick(DialogInterface dialog, int which) {
+//                        firebaseAuth.signOut();
+//
+//                        Intent i = new Intent(getApplicationContext(), LoginActivity.class);
+//                        startActivity(i);
+//
+//
+//                    }
+//                });
+//                builder.setNegativeButton("NO", new DialogInterface.OnClickListener() {
+//                    @Override
+//                    public void onClick(DialogInterface dialog, int which) {
+//                        dialog.dismiss();
+//                    }
+//                });
+//                AlertDialog alert = builder.create();
+//                alert.show();
+//            }
+//        });
 
 
         }
