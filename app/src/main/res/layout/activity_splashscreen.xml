@@ -7,9 +7,10 @@
     android:orientation="vertical"
     tools:context=".splashscreen">
 
-    <VideoView
+    <ImageView
         android:id="@+id/videoview"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"/>
+        android:layout_height="match_parent"
+        android:src="@drawable/hoodie1_1"/>
 
 </RelativeLayout>

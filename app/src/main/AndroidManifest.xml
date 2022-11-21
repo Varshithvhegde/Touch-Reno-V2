@@ -18,52 +18,59 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MyApplication">
         <activity
-            android:name="com.touchreno.myapplication.myCartSys"
-            android:exported="false"
-            android:screenOrientation="portrait"/>
+            android:name=".ProfileDetail"
+            android:exported="false" />
         <activity
-            android:name="com.touchreno.myapplication.ArActivity"
-            android:exported="false"
-            android:screenOrientation="portrait" />
-        <activity
-            android:name="com.touchreno.myapplication.activities.PlaceOrderActivity"
+            android:name=".myOrderSys"
             android:exported="false"
             android:screenOrientation="portrait" />
         <activity
-            android:name="com.touchreno.myapplication.activities.AccessoriesDetailedActivity"
+            android:name=".myCartSys"
             android:exported="false"
             android:screenOrientation="portrait" />
         <activity
-            android:name="com.touchreno.myapplication.activities.BottomsDetailedActivity"
+            android:name=".ArActivity"
             android:exported="false"
             android:screenOrientation="portrait" />
         <activity
-            android:name="com.touchreno.myapplication.activities.AccessoriesActivity"
+            android:name=".activities.PlaceOrderActivity"
             android:exported="false"
             android:screenOrientation="portrait" />
         <activity
-            android:name="com.touchreno.myapplication.activities.BottomsActivity"
+            android:name=".activities.AccessoriesDetailedActivity"
             android:exported="false"
             android:screenOrientation="portrait" />
         <activity
-            android:name="com.touchreno.myapplication.activities.TopsActivity"
+            android:name=".activities.BottomsDetailedActivity"
             android:exported="false"
             android:screenOrientation="portrait" />
         <activity
-            android:name="com.touchreno.myapplication.activities.DetailedActivity"
+            android:name=".activities.AccessoriesActivity"
             android:exported="false"
             android:screenOrientation="portrait" />
         <activity
-            android:name="com.touchreno.myapplication.MainActivity"
+            android:name=".activities.BottomsActivity"
+            android:exported="false"
             android:screenOrientation="portrait" />
         <activity
-            android:name="com.touchreno.myapplication.RegistrationActivity"
+            android:name=".activities.TopsActivity"
+            android:exported="false"
             android:screenOrientation="portrait" />
         <activity
-            android:name="com.touchreno.myapplication.splashscreen"
+            android:name=".activities.DetailedActivity"
+            android:exported="false"
             android:screenOrientation="portrait" />
         <activity
-            android:name="com.touchreno.myapplication.LoginActivity"
+            android:name=".MainActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".RegistrationActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".LoginActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".splashscreen"
             android:exported="true"
             android:label="@string/app_name"
             android:screenOrientation="portrait"

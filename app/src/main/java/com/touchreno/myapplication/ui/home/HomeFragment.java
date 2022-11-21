@@ -30,12 +30,13 @@ import com.google.android.gms.tasks.Task;
 import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.firestore.QueryDocumentSnapshot;
 import com.google.firebase.firestore.QuerySnapshot;
+import com.touchreno.myapplication.myOrderSys;
 
 import java.util.ArrayList;
 import java.util.List;
 
 public class HomeFragment extends Fragment {
-    LinearLayout home,cart;
+    LinearLayout home,cart,order;
     CardView chairs,beds,access;
     RecyclerView topRec, botRec, accRec;
     FirebaseFirestore db;
@@ -81,6 +82,13 @@ public class HomeFragment extends Fragment {
         });
         home=root.findViewById(R.id.homenav);
         cart=root.findViewById(R.id.cartnav);
+        order=root.findViewById(R.id.ordernav);
+        home.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+//                TO-Do
+            }
+        });
         cart.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -89,6 +97,13 @@ public class HomeFragment extends Fragment {
 //                ((Activity) getActivity()).overridePendingTransition(0, 0);
 
 
+            }
+        });
+        order.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i = new Intent(getContext(), myOrderSys.class);
+                startActivity(i);
             }
         });
         //Tops Items

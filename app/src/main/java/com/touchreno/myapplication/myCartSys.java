@@ -35,7 +35,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class myCartSys extends AppCompatActivity {
-    LinearLayout home,cart;
+    LinearLayout home,cart,order;
     RelativeLayout cart1, cart2;
     FirebaseFirestore db;
     FirebaseAuth auth;
@@ -57,6 +57,7 @@ public class myCartSys extends AppCompatActivity {
         buy=findViewById(R.id.buy);
         home=findViewById(R.id.homenav);
         cart=findViewById(R.id.cartnav);
+        order=findViewById(R.id.ordernav);
         cart.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -71,6 +72,13 @@ public class myCartSys extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent i = new Intent(getApplicationContext(), MainActivity.class);
+                startActivity(i);
+            }
+        });
+        order.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i = new Intent(getApplicationContext(), myOrderSys.class);
                 startActivity(i);
             }
         });

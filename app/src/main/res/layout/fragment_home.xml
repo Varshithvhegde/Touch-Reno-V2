@@ -334,7 +334,7 @@
             android:id="@+id/homenav"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_weight="50"
+            android:layout_weight="30"
             android:orientation="vertical">
 
             <ImageView
@@ -356,7 +356,7 @@
             android:id="@+id/cartnav"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_weight="50"
+            android:layout_weight="35"
             android:orientation="vertical">
 
             <ImageView
@@ -364,6 +364,28 @@
                 android:layout_height="28dp"
                 android:layout_gravity="center"
                 android:src="@drawable/ic_shopping_cart_white_24dp" />
+
+            <View
+                android:layout_width="84dp"
+                android:layout_height="2dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="8dp"
+                android:background="@color/browser_actions_text_color"
+                android:visibility="invisible" />
+
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/ordernav"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="35"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="28dp"
+                android:layout_height="28dp"
+                android:layout_gravity="center"
+                android:src="@drawable/orders_icon" />
 
             <View
                 android:layout_width="84dp"
