@@ -102,9 +102,9 @@
         android:layout_marginTop="10dp"
         android:background="@drawable/edittext_background"
         android:fontFamily="@font/lato_regular"
-        android:textColor="@color/black"
         android:inputType="phone"
-        android:padding="5dp" />
+        android:padding="5dp"
+        android:textColor="@color/black" />
 
     <TextView
         android:id="@+id/txtaddress"
@@ -320,6 +320,14 @@
 <!--        android:foregroundGravity="center"-->
 <!--        android:scaleX="3f"-->
 <!--        android:scaleY="3f" />-->
+    <ProgressBar
+        android:id="@+id/progressbar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/mobile"
+        android:layout_centerHorizontal="true"
+        android:scaleX="3"
+        android:scaleY="3" />
 
 
 </RelativeLayout>

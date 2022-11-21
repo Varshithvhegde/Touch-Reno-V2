@@ -19,10 +19,12 @@
         android:theme="@style/Theme.MyApplication">
         <activity
             android:name=".MyAcount"
-            android:exported="false" />
+            android:exported="false"
+            android:screenOrientation="portrait"/>
         <activity
             android:name=".ProfileDetail"
-            android:exported="false" />
+            android:exported="false"
+            android:screenOrientation="portrait"/>
         <activity
             android:name=".myOrderSys"
             android:exported="false"

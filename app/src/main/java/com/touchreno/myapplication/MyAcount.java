@@ -43,8 +43,8 @@ public class MyAcount extends AppCompatActivity {
         country=(TextView) findViewById(R.id.country);
         state = (TextView) findViewById(R.id.state);
         logout=(Button) findViewById(R.id.logout);
-//        progressBar=(ProgressBar) findViewById(R.id.progressbar);
-//        progressBar.setVisibility(View.VISIBLE);
+        progressBar=(ProgressBar) findViewById(R.id.progressbar);
+        progressBar.setVisibility(View.VISIBLE);
         home=findViewById(R.id.homenav);
         cart=findViewById(R.id.cartnav);
         order=findViewById(R.id.ordernav);
@@ -71,7 +71,7 @@ public class MyAcount extends AppCompatActivity {
                 address.setText(a);
                 country.setText(c);
                 state.setText(s);
-//                progressBar.setVisibility(View.GONE);
+                progressBar.setVisibility(View.GONE);
 
             }
 
