@@ -1,6 +1,9 @@
 package com.touchreno.myapplication;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -17,7 +20,7 @@ import com.google.firebase.database.ValueEventListener;
 public class MyAcount extends AppCompatActivity {
     TextView name,mobile,email,address,country,state;
     FirebaseDatabase database;
-
+    LinearLayout home,cart,order,profile;
     // creating a variable for our
     // Database Reference for Firebase.
     DatabaseReference databaseReference;
@@ -33,6 +36,12 @@ public class MyAcount extends AppCompatActivity {
         address =(TextView) findViewById(R.id.address);
         country=(TextView) findViewById(R.id.country);
         state = (TextView) findViewById(R.id.state);
+
+        home=findViewById(R.id.homenav);
+        cart=findViewById(R.id.cartnav);
+        order=findViewById(R.id.ordernav);
+        profile=findViewById(R.id.profile1);
+
         auth=FirebaseAuth.getInstance();
         FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
         database=FirebaseDatabase.getInstance();
@@ -62,6 +71,42 @@ public class MyAcount extends AppCompatActivity {
             }
 
         });
+        cart.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i = new Intent(getApplicationContext(), myCartSys.class);
+                startActivity(i);
+//                ((Activity) getActivity()).overridePendingTransition(0, 0);
+
+
+            }
+        });
+        home.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i = new Intent(getApplicationContext(), MainActivity.class);
+                startActivity(i);
+            }
+        });
+        order.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i = new Intent(getApplicationContext(), myOrderSys.class);
+                startActivity(i);
+            }
+        });
+        profile.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+//               TO-DO
+            }
+        });
+
 
         }
+    public void onBackPressed() {
+
+        Intent a = new Intent(MyAcount.this,MainActivity.class);
+        startActivity(a);
+    }
 }

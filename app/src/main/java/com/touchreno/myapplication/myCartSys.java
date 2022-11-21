@@ -143,4 +143,9 @@ public class myCartSys extends AppCompatActivity {
             overTotalAmount.setText("₹"+totalBill);
         }
     };
+    public void onBackPressed() {
+
+        Intent a = new Intent(myCartSys.this,MainActivity.class);
+        startActivity(a);
+    }
 }

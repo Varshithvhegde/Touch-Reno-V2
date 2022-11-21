@@ -136,4 +136,9 @@ public class myOrderSys extends AppCompatActivity {
 //            overTotalAmount.setText("₹"+totalBill);
         }
     };
+    public void onBackPressed() {
+
+        Intent a = new Intent(myOrderSys.this,MainActivity.class);
+        startActivity(a);
+    }
 }
