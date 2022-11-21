@@ -132,7 +132,7 @@
             android:id="@+id/homenav"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_weight="30"
+            android:layout_weight="25"
             android:orientation="vertical">
 
             <ImageView
@@ -154,7 +154,7 @@
             android:id="@+id/cartnav"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_weight="35"
+            android:layout_weight="25"
             android:orientation="vertical">
 
             <ImageView
@@ -176,7 +176,7 @@
             android:id="@+id/ordernav"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_weight="35"
+            android:layout_weight="25"
             android:orientation="vertical">
 
             <ImageView
@@ -194,5 +194,29 @@
                 android:visibility="invisible" />
 
         </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/profile"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="25"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="28dp"
+                android:layout_height="28dp"
+                android:layout_gravity="center"
+                android:src="@drawable/ic_baseline_account_circle_24" />
+
+            <View
+                android:layout_width="84dp"
+                android:layout_height="2dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="8dp"
+                android:background="@color/common_google_signin_btn_text_dark" />
+
+        </LinearLayout>
+
+
     </LinearLayout>
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

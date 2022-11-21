@@ -39,9 +39,9 @@ public class ProfileDetail extends AppCompatActivity {
         FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
         auth=FirebaseAuth.getInstance();
         database=FirebaseDatabase.getInstance();
-        Intent i=getIntent();
-        String Final = i.getStringExtra("all");
-        String str[] = Final.split("-?");
+//        Intent i=getIntent();
+//        String Final = i.getStringExtra("all");
+
 
         sub.setOnClickListener(new View.OnClickListener() {
             @Override

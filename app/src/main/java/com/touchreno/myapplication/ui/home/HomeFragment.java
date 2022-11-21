@@ -14,6 +14,7 @@ import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.touchreno.myapplication.MyAcount;
 import com.touchreno.myapplication.R;
 import com.touchreno.myapplication.activities.AccessoriesActivity;
 import com.touchreno.myapplication.activities.BottomsActivity;
@@ -36,7 +37,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class HomeFragment extends Fragment {
-    LinearLayout home,cart,order;
+    LinearLayout home,cart,order,profile;
     CardView chairs,beds,access;
     RecyclerView topRec, botRec, accRec;
     FirebaseFirestore db;
@@ -83,6 +84,7 @@ public class HomeFragment extends Fragment {
         home=root.findViewById(R.id.homenav);
         cart=root.findViewById(R.id.cartnav);
         order=root.findViewById(R.id.ordernav);
+        profile=root.findViewById(R.id.profile);
         home.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -103,6 +105,13 @@ public class HomeFragment extends Fragment {
             @Override
             public void onClick(View view) {
                 Intent i = new Intent(getContext(), myOrderSys.class);
+                startActivity(i);
+            }
+        });
+        profile.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i = new Intent(getContext(), MyAcount.class);
                 startActivity(i);
             }
         });

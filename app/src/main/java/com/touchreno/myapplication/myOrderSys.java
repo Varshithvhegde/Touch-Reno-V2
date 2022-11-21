@@ -30,7 +30,7 @@ import com.google.firebase.firestore.QuerySnapshot;
 import java.util.ArrayList;
 import java.util.List;
 public class myOrderSys extends AppCompatActivity {
-    LinearLayout home,cart,order;
+    LinearLayout home,cart,order,profile;
     RelativeLayout cart1, cart2;
     FirebaseFirestore db;
     FirebaseAuth auth;
@@ -53,6 +53,7 @@ public class myOrderSys extends AppCompatActivity {
         home=findViewById(R.id.homenav);
         cart=findViewById(R.id.cartnav);
         order=findViewById(R.id.ordernav);
+        profile=findViewById(R.id.profile);
         cart.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -74,6 +75,13 @@ public class myOrderSys extends AppCompatActivity {
             @Override
             public void onClick(View view) {
 //                TO-DO
+            }
+        });
+        profile.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i = new Intent(getApplicationContext(), MyAcount.class);
+                startActivity(i);
             }
         });
         overTotalAmount=findViewById(R.id.total);
