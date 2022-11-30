@@ -68,7 +68,7 @@ public class RegistrationActivity extends AppCompatActivity {
         String userName=name.getText().toString();
         String userEmail=email.getText().toString();
         String userPassword=password.getText().toString();
-
+        String Final = userName+"-?"+userEmail+"-?"+userPassword;
         if (TextUtils.isEmpty(userName)){
             Toast.makeText(this, "Name is Empty!", Toast.LENGTH_SHORT).show();
             return;
@@ -96,7 +96,10 @@ public class RegistrationActivity extends AppCompatActivity {
                             database.getReference().child("Users").child(id).setValue(userModel);
                             progressBar.setVisibility(View.GONE);
                             Toast.makeText(RegistrationActivity.this, "Registration Successful", Toast.LENGTH_SHORT).show();
-                            startActivity(new Intent(RegistrationActivity.this, ProfileDetail.class));
+                            Intent i= new Intent(RegistrationActivity.this, ProfileDetail.class);
+                            i.putExtra("all",Final);
+//                            startActivity(new Intent(RegistrationActivity.this, ProfileDetail.class));
+                            startActivity(i);
                             finish();
                         }
                         else {

@@ -67,5 +67,7 @@ dependencies {
     implementation("com.gorisse.thomas.sceneform:sceneform:1.20.1")
     //Image Slider
     implementation 'com.github.Fuadafdhal:Auto-Image-Slider:1.0'
+    //Circular ImageView
+    implementation 'de.hdodenhof:circleimageview:3.1.0'
 
 }

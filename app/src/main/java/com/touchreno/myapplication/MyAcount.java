@@ -6,6 +6,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.ProgressBar;
 import android.widget.TextView;
@@ -13,6 +14,7 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.bumptech.glide.Glide;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DataSnapshot;
@@ -32,6 +34,7 @@ public class MyAcount extends AppCompatActivity {
     FirebaseAuth auth;
     Button logout;
     ProgressBar progressBar;
+    ImageView profilimg;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -43,6 +46,7 @@ public class MyAcount extends AppCompatActivity {
         country=(TextView) findViewById(R.id.country);
         state = (TextView) findViewById(R.id.state);
         logout=(Button) findViewById(R.id.logout);
+        profilimg=(ImageView) findViewById(R.id.header);
         progressBar=(ProgressBar) findViewById(R.id.progressbar);
         progressBar.setVisibility(View.VISIBLE);
         home=findViewById(R.id.homenav);
@@ -59,6 +63,16 @@ public class MyAcount extends AppCompatActivity {
         ref.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+
+                String url = dataSnapshot.child(auth.getUid()).child("profimage").getValue(String.class);
+                Glide.with(getApplicationContext())
+                        .load(url) // image url
+                        // any placeholder to load at start
+                        .error(R.drawable.accessories)  // any image in case of error
+                        // resizing
+
+                        .into(profilimg);
+
                 String n = dataSnapshot.child(auth.getUid()).child("name").getValue(String.class);
                 String e = dataSnapshot.child(auth.getUid()).child("email").getValue(String.class);
                 String m = dataSnapshot.child(auth.getUid()).child("Mobile").getValue(String.class);
