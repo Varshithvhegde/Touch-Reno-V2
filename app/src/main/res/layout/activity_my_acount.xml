@@ -221,14 +221,16 @@
                 android:textColor="@color/white"
                 android:textSize="16sp" />
 
-            <ProgressBar
+            <com.github.ybq.android.spinkit.SpinKitView
                 android:id="@+id/progressbar"
+                style="@style/SpinKitView.Large.FadingCircle"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/mobile"
                 android:layout_centerHorizontal="true"
                 android:scaleX="3"
-                android:scaleY="3" />
+                android:scaleY="3"
+                app:SpinKit_Color="@color/teal_200" />
         </RelativeLayout>
     </ScrollView>
 
