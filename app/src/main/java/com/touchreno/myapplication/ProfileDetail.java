@@ -3,6 +3,7 @@ package com.touchreno.myapplication;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.app.ProgressDialog;
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.net.Uri;
@@ -53,6 +54,7 @@ public class ProfileDetail extends AppCompatActivity {
     FirebaseDatabase database;
     ProgressBar progressBar;
     ImageView profileimg;
+    ProgressDialog progressDialog;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -65,6 +67,7 @@ public class ProfileDetail extends AppCompatActivity {
         mobile=(EditText) findViewById(R.id.mobile);
         address =(EditText) findViewById(R.id.address);
         profileimg=(ImageView) findViewById(R.id.header);
+        progressDialog=new ProgressDialog(this);
         FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
         auth=FirebaseAuth.getInstance();
         database=FirebaseDatabase.getInstance();
@@ -160,22 +163,14 @@ public class ProfileDetail extends AppCompatActivity {
                                         @Override
                                         public void onSuccess(Uri uri) {
                                             downloadUri = uri.toString();
-                                            Toast
-                                                    .makeText(ProfileDetail.this,
-                                                            downloadUri,
-                                                            Toast.LENGTH_LONG)
-                                                    .show();
+
                                         }
                                     });
 
                                     // Image uploaded successfully
                                     // Dismiss dialog
 //                                    progressDialog.dismiss();
-                                    Toast
-                                            .makeText(ProfileDetail.this,
-                                                    "downloadUri",
-                                                    Toast.LENGTH_SHORT)
-                                            .show();
+                                    progressDialog.dismiss();
                                     Toast
                                             .makeText(ProfileDetail.this,
                                                     "Image Uploaded!!",
@@ -218,9 +213,10 @@ public class ProfileDetail extends AppCompatActivity {
                                             = (100.0
                                             * taskSnapshot.getBytesTransferred()
                                             / taskSnapshot.getTotalByteCount());
-//                                    progressDialog.setMessage(
-//                                            "Uploaded "
-//                                                    + (int)progress + "%");
+                                    progressDialog.setMessage(
+                                            "Uploaded "
+                                                    + (int)progress + "%");
+                                    progressDialog.show();
                                 }
                             });
         }
