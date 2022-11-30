@@ -84,41 +84,7 @@ public class ProfileDetail extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 uploadImage();
-
                 progressBar.setVisibility(View.VISIBLE);
-//                    Uploaddata();
-//                    String c = country.getText().toString();
-//                    String s = state.getText().toString();
-//                    String m = mobile.getText().toString();
-//                    String a = address.getText().toString();
-//                    if (TextUtils.isEmpty(c)) {
-//                        Toast.makeText(getApplicationContext(), "Country is Empty!", Toast.LENGTH_SHORT).show();
-//                        return;
-//                    }
-//                    if (TextUtils.isEmpty(s)) {
-//                        Toast.makeText(getApplicationContext(), "State is Empty!", Toast.LENGTH_SHORT).show();
-//                        return;
-//                    }
-//                    if (TextUtils.isEmpty(m)) {
-//                        Toast.makeText(getApplicationContext(), "Mobile is Empty!", Toast.LENGTH_SHORT).show();
-//                        return;
-//                    }
-//                    if (TextUtils.isEmpty(a)) {
-//                        Toast.makeText(getApplicationContext(), "Address is Empty!", Toast.LENGTH_SHORT).show();
-//                        return;
-//                    }
-//                    DatabaseReference ref = database.getReference().child("Users").child(auth.getUid());
-//                    Map<String, Object> updates = new HashMap<String, Object>();
-//                    updates.put("Country", c);
-//                    updates.put("State", s);
-//                    updates.put("Mobile", m);
-//                    updates.put("Address", a);
-//
-//                    ref.updateChildren(updates);
-//                    progressBar.setVisibility(View.VISIBLE);
-//                    Toast.makeText(ProfileDetail.this, "Details Uploaded Successfully", Toast.LENGTH_SHORT).show();
-//                    Intent i = new Intent(ProfileDetail.this, MainActivity.class);
-//                    startActivity(i);
             }
 
         });
