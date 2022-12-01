@@ -1,12 +1,17 @@
 package com.touchreno.myapplication;
 
+import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.MenuItem;
 import android.widget.LinearLayout;
 
+import com.google.firebase.auth.FirebaseAuth;
 import com.touchreno.myapplication.adapters.ImageSliderAdapter;
 import com.google.android.material.navigation.NavigationView;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatDelegate;
 import androidx.navigation.NavController;
 import androidx.navigation.Navigation;
@@ -21,12 +26,13 @@ import com.smarteist.autoimageslider.IndicatorView.animation.type.IndicatorAnima
 import com.smarteist.autoimageslider.SliderAnimations;
 import com.smarteist.autoimageslider.SliderView;
 
-public class MainActivity extends AppCompatActivity {
-
+public class MainActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
+    FirebaseAuth firebaseAuth;
     private AppBarConfiguration mAppBarConfiguration;
     private ActivityMainBinding binding;
     public LinearLayout navcart;
     SliderView sliderView;
+    AlertDialog.Builder builder;
     int[] images={R.drawable.slide1,R.drawable.slide2,R.drawable.slide3,R.drawable.slide4};
 
     @Override
@@ -56,8 +62,9 @@ public class MainActivity extends AppCompatActivity {
         sliderView.setIndicatorAnimation(IndicatorAnimationType.WORM);
         sliderView.setSliderTransformAnimation(SliderAnimations.SIMPLETRANSFORMATION);
         sliderView.startAutoCycle();
-
-
+        navigationView.setNavigationItemSelectedListener(this);
+        builder=new AlertDialog.Builder(this);
+        firebaseAuth=FirebaseAuth.getInstance();
     }
 
     @Override
@@ -75,4 +82,51 @@ public class MainActivity extends AppCompatActivity {
     }
 
 
+    @Override
+    public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+        int id = item.getItemId();
+        if(id==R.id.nav_home){
+            Intent intent = new Intent(this,MyAcount.class);
+
+
+            startActivity(intent);
+        }
+        if(id==R.id.nav_exit){
+            firebaseAuth = FirebaseAuth.getInstance();
+            builder.setTitle("Logout");
+            builder.setMessage("Are you sure you want to logout?");
+            builder.setPositiveButton("YES", new DialogInterface.OnClickListener() {
+                @Override
+                public void onClick(DialogInterface dialog, int which) {
+                    firebaseAuth.signOut();
+
+                    Intent i = new Intent(getApplicationContext(), LoginActivity.class);
+                    startActivity(i);
+
+
+                }
+            });
+            builder.setNegativeButton("NO", new DialogInterface.OnClickListener() {
+                @Override
+                public void onClick(DialogInterface dialog, int which) {
+                    dialog.dismiss();
+                }
+            });
+            AlertDialog alert = builder.create();
+            alert.show();
+        }
+        if(id==R.id.nav_myCart){
+            Intent intent = new Intent(this,myCartSys.class);
+            startActivity(intent);
+        }
+        if(id==R.id.nav_order){
+            Intent intent = new Intent(this,myOrderSys.class);
+            startActivity(intent);
+        }
+        if(id==R.id.nav_account){
+            Intent intent = new Intent(this,MyAcount.class);
+            startActivity(intent);
+        }
+        return true;
+    }
 }

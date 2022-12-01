@@ -12,6 +12,15 @@
             android:id="@+id/nav_myCart"
             android:icon="@drawable/ic_baseline_shopping_cart_24"
             android:title="@string/menu_cart" />
+
+        <item
+            android:id="@+id/nav_order"
+            android:icon="@drawable/orders_icon"
+            android:title="Orders" />
+        <item
+            android:id="@+id/nav_account"
+            android:icon="@drawable/ic_baseline_account_circle_24"
+            android:title="My Account" />
         <item
             android:id="@+id/nav_exit"
             android:icon="@drawable/ic_baseline_exit_to_app_24"
