@@ -5,14 +5,14 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="#a4d8ef"
+    android:background="@color/teal_200"
     tools:context=".splashscreen">
 
     <ImageView
         android:id="@+id/videoview"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:src="@drawable/touchreno" />
+        android:src="@drawable/tlogo" />
     <com.github.ybq.android.spinkit.SpinKitView
         android:id="@+id/progressbar"
         style="@style/SpinKitView.Circle"
