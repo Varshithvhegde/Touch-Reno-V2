@@ -114,6 +114,7 @@ public class ProfileDetail extends AppCompatActivity {
             Toast.makeText(getApplicationContext(), "Address is Empty!", Toast.LENGTH_SHORT).show();
             return;
         }
+
         DatabaseReference ref = database.getReference().child("Users").child(auth.getUid());
         Map<String, Object> updates = new HashMap<String, Object>();
         updates.put("Country", c);
@@ -129,7 +130,7 @@ public class ProfileDetail extends AppCompatActivity {
     }
 
     private void uploadImage() {
-        Toast.makeText(ProfileDetail.this, "Uploading Started", Toast.LENGTH_SHORT).show();
+
         if (filePath != null) {
 
             // Code for showing progressDialog while uploading
@@ -137,7 +138,7 @@ public class ProfileDetail extends AppCompatActivity {
 //                    = new ProgressDialog(this);
 //            progressDialog.setTitle("Uploading...");
 //            progressDialog.show();
-
+            Toast.makeText(ProfileDetail.this, "Uploading Started", Toast.LENGTH_SHORT).show();
             // Defining the child of storageReference
             StorageReference ref
                     = storageReference
@@ -219,6 +220,15 @@ public class ProfileDetail extends AppCompatActivity {
                                     progressDialog.show();
                                 }
                             });
+        }
+        if(filePath==null){
+            downloadUri="";
+            Toast
+                    .makeText(ProfileDetail.this,
+                            "Profile Image is not selected!",
+                            Toast.LENGTH_SHORT)
+                    .show();
+            Uploaddata();
         }
     }
     @Override
